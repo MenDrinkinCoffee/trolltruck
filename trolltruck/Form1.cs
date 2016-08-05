@@ -16,8 +16,6 @@ namespace trolltruck
         {
             InitializeComponent();
             label1.Visible = false;
-
-  
         }
         public void dumpTruck()
         {
@@ -103,11 +101,6 @@ namespace trolltruck
         private void button1_Click(object sender, EventArgs e)
         {
             dumpTruck();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

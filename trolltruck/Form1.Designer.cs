@@ -78,7 +78,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(132, 232);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
