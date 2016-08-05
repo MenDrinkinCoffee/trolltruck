@@ -102,5 +102,31 @@ namespace trolltruck
         {
             dumpTruck();
         }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            var player = new System.Media.SoundPlayer();
+            player.Stream = Properties.Resources.truckmove;
+            player.PlayLooping();
+            System.Threading.Thread.Sleep(7250);
+
+            while (true)
+            {
+                if (pictureBox1.Location.X <= 3)
+                {
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(50);
+                    player.Stop();
+                    break;
+                }
+
+                Point newlocation = this.pictureBox1.Location;
+                newlocation.X -= 2;
+                this.pictureBox1.Location = newlocation;
+
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(30);
+            }
+        }
     }
 }
